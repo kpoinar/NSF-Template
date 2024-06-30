@@ -1,0 +1,87 @@
+\documentclass[11pt]{style/nsf}
+
+\usepackage{epsfig}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+%\setmainfont{cmunrm} % Computer Modern Roman 
+% If using {fontspec} to get actual fonts (like Times New Roman), must compile with LuaLaTeX -or- XeLaTeX.  Not compatible with pdflatex.
+% https://tex.stackexchange.com/questions/74496/how-to-use-times-roman-nimbus-roman-with-fontspec-under-linux-and-lualatex/74499
+% Setting font size to 11.06 achieves actual font size of 11.019, which will pass Research.Gov.
+\usepackage{setspace}
+\usepackage{pdfpages} % to include existing pdf files
+%\usepackage{hyperref} % Hyperlinks not allowed in NSF documents
+\usepackage{enumitem}
+\usepackage{graphicx,wrapfig,float} % float to force figure [H]
+\graphicspath{{figures/}}
+\usepackage[font=small,skip=1pt]{caption} % To remove spacing between figure & its caption
+\usepackage{natbib} % for bibliography
+\setcounter{secnumdepth}{4} % To allow subsubsubsection (which is called as \paragraph{})
+\usepackage{lipsum} % just to generate dummy text
+
+
+% NSF proposal generation template style file.
+% based on latex stylefiles  written by Stefan Llewellyn Smith and
+% Sarah Gille, with contributions from other collaborators.
+
+% Updated by Amr Abed, 
+% https://github.com/amrabed/NSF-LaTeX-Template
+
+% and updated again by Kristin Poinar 
+
+% Font size needs to be 11 exactly (or larger)
+% the 11pt argument actually sets it to 10.95!
+% https://tex.stackexchange.com/questions/473838/how-to-set-the-font-size-to-11-5pt
+
+\begin{document}
+
+\fontsize{11.06pt}{14pt}\selectfont 
+% Setting font size to 11.06 achieves actual font size of 11.019, which will pass Research.Gov.
+
+
+
+% A. Cover Sheet
+% The Cover Sheet is now electronically pre-filled by FastLane / Research.gov
+
+% B. Project Summary
+% Cannot exceed one page
+\newsection{B}
+\input{sections/summary}
+
+% C. Table of Contents 
+% A Table of Contents is automatically generated for the proposal by FastLane / Research.gov
+
+% D. Project Description
+\newpage\newsection{D}
+%\title{You may or may not want to display your title; it is not required and takes up space}
+\input{sections/description}
+
+% E. References Cited
+\newpage\newsection{E}
+\renewcommand\refname{References Cited}
+\bibliography{proposal}
+
+% F. Biographical Sketch(es)
+\newpage\newsection{F}
+\include{sections/biosketch}
+
+% G. Budget Justification
+\newpage\newsection{G}
+\input{sections/budget}
+
+
+%  H. Current and Pending Support
+\newpage\newsection{H}
+\include{sections/current-and-pending}
+
+% I. Facilities, Equipment and Other Resources
+\newpage\newsection{I}
+\input{sections/resources}
+
+% J. Special Information and Supplementary Documentation
+\newpage\newsection{J}
+\input{sections/data}		% Data Management Plan (Required)
+\newpage
+\input{sections/mentoring}   % Mentoring Plan (if applicable)
+
+\end{document}

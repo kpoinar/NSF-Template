@@ -1,5 +1,5 @@
 # NSF-Template
  LaTeX template for an NSF proposal
-The <a href="http://www-pord.ucsd.edu/~sgille/how_to/proposal_prep.html" target="_blank">very initial version of this template</a> was created by Sarah Gille. The next version of the template, by Amr Abed, follows the guidelines in <a href="http://www.nsf.gov/publications/pub_summ.jsp?ods_key=gpg15001&org=NSF" target="_blank">NSF GPG 15-1</a>. The current version mostly follows the previous version, but it may no longer fully comply with the earlier guidelines.
+The <a href="http://www-pord.ucsd.edu/~sgille/how_to/proposal_prep.html" target="_blank">very initial version of this template</a> was created by Sarah Gille. The <a href="https://github.com/amrabed/NSF-LaTeX-Template/" target="_blank">next version of the template</a>, by Amr Abed, follows the guidelines in <a href="http://www.nsf.gov/publications/pub_summ.jsp?ods_key=gpg15001&org=NSF" target="_blank">NSF GPG 15-1</a>, published 2014. The current version mostly follows the previous version, but it may no longer fully comply with the earlier guidelines or even <a href="https://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf24001&org=NSF" target="_blank"the current PAPPG</a>.
 
-It is your responsibility to make sure that everything is in agreement with the current NSF GPG and your program solicitation. Good luck!
+As said nicely by Amr Abed, it is your responsibility to make sure that everything is in agreement with the current NSF GPG and your program solicitation. Good luck!
